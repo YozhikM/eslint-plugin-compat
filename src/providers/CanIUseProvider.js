@@ -251,6 +251,15 @@ const CanIUseProvider: Array<Node> = [
     object: 'URLSearchParams',
     isValid,
     getUnsupportedTargets
+  },
+  // getBoundingClientRect.x
+  {
+    id: 'getboundingclientrect',
+    ASTNodeType: 'MemberExpression',
+    object: 'getBoundingClientRect',
+    property: 'x',
+    isValid,
+    getUnsupportedTargets
   }
 ];
 

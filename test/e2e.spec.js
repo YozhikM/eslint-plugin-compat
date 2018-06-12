@@ -194,6 +194,19 @@ ruleTester.run('compat', rule, {
         message: 'URLSearchParams is not supported in Safari 10, Firefox 28, Chrome 48',
         type: 'NewExpression'
       }]
+    },
+    {
+      code: 'getBoundingClientRect().x',
+      settings: {
+        browsers: [
+          'ie 9',
+          'edge 13'
+        ]
+      },
+      errors: [{
+        message: 'getBoundingClientRect()x is not supported in Safari 10, Firefox 28, Chrome 48',
+        type: 'MemberExpression'
+      }]
     }
   ]
 });
